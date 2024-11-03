@@ -13,3 +13,10 @@ class RecipeForm(forms.ModelForm):
             'image': 'Изображение',
             'author': 'Автор',
         }
+
+
+
+class CreateRecipeForm(forms.ModelForm):
+    class Meta:
+        model = Recipe
+        fields = ['title', 'description']

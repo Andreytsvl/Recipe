@@ -8,6 +8,7 @@ class Recipe(models.Model):
     cooking_time = models.IntegerField(verbose_name="Время приготовления (минуты)")
     image = models.ImageField(upload_to='recipes/', verbose_name="Изображение")
     author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор")
+    #created_at = models.DateTimeField(auto_now_add=True, default=None, verbose_name='Дата добавления')
 
     def __str__(self):
         return self.title

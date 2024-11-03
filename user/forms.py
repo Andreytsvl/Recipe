@@ -17,19 +17,6 @@ class UserLoginForm(AuthenticationForm):
     password = forms.CharField()
 
 
-# class UserRegistrationForm(UserCreationForm):
-#     username = forms.CharField()
-#     password1 = forms.CharField()
-#     password2 = forms.CharField()
-#
-#     class Meta:
-#         model = User
-#         fields = (
-#
-#             "username",
-#             "password1",
-#             "password2",
-#         )
 
 
 class UserRegistrationForm(forms.ModelForm):
@@ -37,7 +24,7 @@ class UserRegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'password']
+        fields = ('username', 'password',)
 
 
 
